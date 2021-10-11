@@ -8,9 +8,9 @@ with open("./demo.png", "wb") as f:
 parser = argparse.ArgumentParser()
 args = parser.parse_args()
 
-IMG = "./demo.png"
-WIDTH = 45
-HEIGHT = 38
+img = "./demo.png"
+width = 45
+height = 38
 ascii_char = list("●○")
 
 
@@ -24,14 +24,12 @@ def get_char(r, g, b, alpha=256):
 
 
 if __name__ == "__main__":
-    im = Image.open(IMG)
-    im = im.resize((WIDTH, HEIGHT), Image.NEAREST)
+    im = Image.open(img).resize((width, height), Image.NEAREST)
     txt = ""
-    for i in range(HEIGHT):
-        for j in range(WIDTH):
+    for i in range(height):
+        for j in range(width):
             txt += get_char(*im.getpixel((j, i)))
         txt += "\n"
     print(txt)
-    f = open("./黑白.txt", 'w')
+    f = open("./黑白.txt", "w")
     f.write(txt)
-    f.close()
