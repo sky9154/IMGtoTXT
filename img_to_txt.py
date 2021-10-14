@@ -11,7 +11,7 @@ args = parser.parse_args()
 img = "./demo.png"
 width = 45
 height = 38
-ascii_char = list("●○")
+ascii_char = list("⠀⠄⠆⠖⠶⡶⣩⣪⣫⣾⣿")
 
 
 def get_char(r, g, b, alpha=256):
