@@ -31,5 +31,5 @@ if __name__ == "__main__":
             txt += get_char(*im.getpixel((j, i)))
         txt += "\n"
     print(txt)
-    f = open("./黑白.txt", "w")
+    f = open("./黑白.txt", "w", encoding="utf-8")
     f.write(txt)
